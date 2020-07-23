@@ -1,0 +1,16 @@
+.City h2 {
+    color: #143360;
+    font-size: 50px;
+    position: relative;
+    left: 15px;
+    
+  }
+  
+  .City h5 {
+    color: #204051;
+    position: relative;
+    left: 60px;
+    bottom: 15px;
+    font-size: 25px;
+  }
+  

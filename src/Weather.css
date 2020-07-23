@@ -1,0 +1,17 @@
+.Weather small {
+    color: #143360;
+    font-size: 50px;
+    padding: 0;
+  }
+  .Weather img {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 5px;
+  }
+  .Weather {
+    border: 5px solid #111d5e;
+    border-radius: 90px;
+    max-width: 250px;
+    text-align: center;
+  }

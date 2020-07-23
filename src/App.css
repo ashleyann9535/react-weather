@@ -1,0 +1,36 @@
+.App {
+  font-family: "Crimson Text", serif;
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  padding: 5px 20px;
+}
+
+.App h1 {
+  color: #143360;
+  position: relative;
+  left: 10px;
+}
+
+.App h6 {
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
