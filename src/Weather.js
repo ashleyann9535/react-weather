@@ -8,15 +8,13 @@ export default function Weather() {
       <br />
       <div>
         <small> 85° </small>
-        <a href="#" className="linkF">
-          {" "}
-          F{" "}
-        </a>
+        <p className="linkF">
+          F
+        </p>
         |
-        <a href="#" className="linkC">
-          {" "}
-          C{" "}
-        </a>
+        <p className="linkC">
+          C
+        </p>
       </div>
     </div>
   );
