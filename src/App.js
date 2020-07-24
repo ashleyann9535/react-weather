@@ -5,6 +5,7 @@ import DateTime from "./DateTime";
 import City from "./City";
 import Weather from "./Weather";
 import WeatherInfo from "./WeatherInfo";
+import HourForecast from "./HourForecast"
 
 function App() {
   return (
@@ -21,7 +22,15 @@ function App() {
           <Weather />
         </div>
       </div>
-      <WeatherInfo />
+      <br />
+      <div className="row">
+        <div className="col-md-3">
+          <WeatherInfo />
+        </div>
+        <div className="col-md-9">
+          <HourForecast />
+        </div>
+      </div>
       <br />
       <h6 className="gitSite">
         <a href="https://github.com/ashleyann9535/react-weather">Open source code </a>
