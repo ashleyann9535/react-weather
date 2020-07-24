@@ -5,7 +5,6 @@ import DateTime from "./DateTime";
 import City from "./City";
 import Weather from "./Weather";
 import WeatherInfo from "./WeatherInfo";
-import logo from './logo.svg';
 
 function App() {
   return (
