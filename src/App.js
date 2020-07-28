@@ -16,7 +16,7 @@ function App() {
       <br />
       <div className="row">
         <div className="col-md-4">
-          <City />
+          <City defaultCity="Chicago" />
         </div>
         <div className="col-md-8">
           <Weather />
