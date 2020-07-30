@@ -23,6 +23,7 @@ function App() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
+      city: response.data.name,
     });
   }
 
@@ -54,7 +55,7 @@ function App() {
         <br />
         <div className="row">
           <div className="col-md-4">
-            <City displayCity={city} highTemp={weather.highTemperature} lowTemp={weather.lowTemperature} />
+            <City displayCity={weather.city} highTemp={weather.highTemperature} lowTemp={weather.lowTemperature} />
           </div>
           <div className="col-md-8">
             <Weather currentTemp={weather.temperature} />
