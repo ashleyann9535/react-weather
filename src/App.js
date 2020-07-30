@@ -15,7 +15,7 @@ function App() {
     console.log (response.data)
     setWeather({
       ready: true,
-      temperature: response.data.main.temp,
+      temperature:Math.round(response.data.main.temp),
       date: new Date(response.data.dt*1000),
     });
   }
@@ -44,14 +44,14 @@ function App() {
             <input type="submit" value="search" />
           </form>
         </div>
-        <DateTime date = {setWeather.date} />
+        <DateTime date = {weather.date} />
         <br />
         <div className="row">
           <div className="col-md-4">
             <City defaultCity="Chicago" />
           </div>
           <div className="col-md-8">
-            <Weather currentTemp={setWeather.temperature} />
+            <Weather currentTemp={weather.temperature} />
           </div>
         </div>
         <br />

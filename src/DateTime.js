@@ -4,5 +4,13 @@ import "./DateTime.css";
 export default function DateTime(props) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[props.date.getDay()];
-  return <div className="DateTime">Last Updated:{day}</div>;
+  let hours = props.date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`
+  }
+  let minutes = props.date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`
+  }
+  return <div className="DateTime">Last Updated:{day} {hours}:{minutes} </div>;
 }
