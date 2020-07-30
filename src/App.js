@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import Search from "./Search";
 import DateTime from "./DateTime";
 import City from "./City";
 import Weather from "./Weather";
@@ -10,6 +9,7 @@ import axios from "axios"
 
 function App() {
   const [weather, setWeather] = useState({ready: false});
+  const [city, setCity] = useState ("Chicago")
 
   function displayWeather(response){
     console.log (response.data)
@@ -20,11 +20,30 @@ function App() {
     });
   }
 
+  function searchSubmit(event){
+    event.preventDefault();
+    search();
+  }
+
+  function searchCity(event){
+    setCity(event.target.value);
+  }
+
+  function search(){
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d26daee782ed7569b86130dfdffeb3ee&units=imperial`;
+    axios.get(url).then(displayWeather);
+  }
+
   if (weather.ready){
     return (
       <div className="App">
         <h1>Weather</h1>
-        <Search />
+        <div className="Search">
+          <form onSubmit={searchSubmit} >
+            <input type="search" placeholder="city" onChange={searchCity} />
+            <input type="submit" value="search" />
+          </form>
+        </div>
         <DateTime date = {setWeather.date} />
         <br />
         <div className="row">
@@ -52,9 +71,7 @@ function App() {
       </div>
     );
   } else {
-    let city = "Chicago"
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d26daee782ed7569b86130dfdffeb3ee&units=imperial`;
-    axios.get(url).then(displayWeather);
+    search();
     return "Loading"; 
   }
 }
