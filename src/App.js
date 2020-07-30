@@ -15,10 +15,14 @@ function App() {
     console.log (response.data)
     setWeather({
       ready: true,
-      temperature:Math.round(response.data.main.temp),
+      temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt*1000),
       highTemperature: Math.round(response.data.main.temp_max),
-      lowTemperature: Math.round(response.data.main.temp_min)
+      lowTemperature: Math.round(response.data.main.temp_min),
+      feelsLike: Math.round(response.data.main.feels_like),
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
     });
   }
 
@@ -59,7 +63,7 @@ function App() {
         <br />
         <div className="row">
           <div className="col-md-3">
-            <WeatherInfo />
+            <WeatherInfo currentDescription={weather.description} feelsLikeTemp={weather.feelsLike} currentHumidity={weather.humidity} windSpeed={weather.wind} />
           </div>
           <div className="col-md-9">
             <HourForecast />

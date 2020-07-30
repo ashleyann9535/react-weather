@@ -1,15 +1,15 @@
 import React from "react";
 import "./WeatherInfo.css";
 
-export default function WeatherInfo() {
+export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h5> Weather Information </h5>
-      <ul>
-        <li> Description: Sunny </li>
-        <li> Feels Like: 90° </li>
-        <li> Humidity: 70% </li>
-        <li> Wind Speed: 5mph </li>
+      <ul className="text-capitalize">
+        <li> Description: {props.currentDescription} </li>
+        <li> Feels Like: {props.feelsLikeTemp}°F </li>
+        <li> Humidity: {props.currentHumidity}% </li>
+        <li> Wind Speed: {props.windSpeed}mph </li>
       </ul>
     </div>
   );
