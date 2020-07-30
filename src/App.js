@@ -9,13 +9,14 @@ import HourForecast from "./HourForecast"
 import axios from "axios"
 
 function App() {
-  let [weather, setWeather] = useState({ready: false});
+  const [weather, setWeather] = useState({ready: false});
 
   function displayWeather(response){
     console.log (response.data)
     setWeather({
       ready: true,
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt*1000),
     });
   }
 
@@ -24,7 +25,7 @@ function App() {
       <div className="App">
         <h1>Weather</h1>
         <Search />
-        <DateTime />
+        <DateTime date = {setWeather.date} />
         <br />
         <div className="row">
           <div className="col-md-4">
