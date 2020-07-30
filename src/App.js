@@ -24,6 +24,7 @@ function App() {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
   }
 
@@ -54,11 +55,11 @@ function App() {
         <DateTime date = {weather.date} />
         <br />
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <City displayCity={weather.city} highTemp={weather.highTemperature} lowTemp={weather.lowTemperature} />
           </div>
-          <div className="col-md-8">
-            <Weather fahrenheit={weather.temperature} />
+          <div className="col-md-9">
+            <Weather fahrenheit={weather.temperature} mainIcon={weather.icon} />
           </div>
         </div>
         <br />

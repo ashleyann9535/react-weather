@@ -1,3 +1,7 @@
+.WeatherInfo {
+  position: relative;
+  bottom: 100px;
+}
 .WeatherInfo h5 {
     color: #143360;
     padding: 0;

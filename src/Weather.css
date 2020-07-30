@@ -1,4 +1,4 @@
-.Weather small {
+.Weather .currentTemp {
     color: #143360;
     font-size: 50px;
     padding: 0;
@@ -8,10 +8,20 @@
     margin: 0;
     padding: 0;
     left: 5px;
+    height: 100px;
+    width: 100px;
   }
+
+  .Weather br {
+    line-height: 2px;
+  }
+
   .Weather {
     border: 5px solid #111d5e;
     border-radius: 90px;
-    max-width: 250px;
+    max-width: 200px;
+    max-height: 250px;
     text-align: center;
+    position: relative;
+    bottom: 25px;
   }
