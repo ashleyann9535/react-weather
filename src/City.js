@@ -6,9 +6,9 @@ function City(props) {
     <div className="City">
       <h2>
         {" "}
-        <strong> {props.defaultCity} </strong>{" "}
+        <strong> {props.displayCity} </strong>{" "}
       </h2>
-      <h5> 90° / 68° </h5>
+      <h5> {props.highTemp}° / {props.lowTemp}° </h5>
     </div>
   );
 }

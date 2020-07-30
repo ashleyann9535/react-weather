@@ -17,6 +17,8 @@ function App() {
       ready: true,
       temperature:Math.round(response.data.main.temp),
       date: new Date(response.data.dt*1000),
+      highTemperature: Math.round(response.data.main.temp_max),
+      lowTemperature: Math.round(response.data.main.temp_min)
     });
   }
 
@@ -48,7 +50,7 @@ function App() {
         <br />
         <div className="row">
           <div className="col-md-4">
-            <City defaultCity="Chicago" />
+            <City displayCity={city} highTemp={weather.highTemperature} lowTemp={weather.lowTemperature} />
           </div>
           <div className="col-md-8">
             <Weather currentTemp={weather.temperature} />
