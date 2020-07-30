@@ -58,7 +58,7 @@ function App() {
             <City displayCity={weather.city} highTemp={weather.highTemperature} lowTemp={weather.lowTemperature} />
           </div>
           <div className="col-md-8">
-            <Weather currentTemp={weather.temperature} />
+            <Weather fahrenheit={weather.temperature} />
           </div>
         </div>
         <br />
