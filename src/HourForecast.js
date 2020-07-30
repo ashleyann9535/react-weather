@@ -1,6 +1,5 @@
 import React from "react";
 import "./HourForecast.css";
-import axios from "axios"
 
 function HourForecast (response) {
     return (
