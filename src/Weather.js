@@ -25,7 +25,7 @@ export default function Weather(props) {
       <div className="Weather">
         <br />
         <div>
-          <img src={props.mainIcon} class="card-img-top" id="mainIcon"/>
+          <img src={props.mainIcon} className="card-img-top" alt=""/>
           <br />
           <small className="currentTemp">{props.fahrenheit}°</small> 
           <span>F | 
@@ -38,7 +38,7 @@ export default function Weather(props) {
       <div className="Weather">
         <br />
         <div>
-          <img src={props.mainIcon} class="card-img-top" id="mainIcon"/>
+          <img src={props.mainIcon} className="card-img-top" alt="" />
           <br />
           <small>{Math.round(equation())}°</small> 
           <span><a href="/" onClick={showFahrenheit}>F </a>

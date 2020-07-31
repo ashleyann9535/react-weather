@@ -4,8 +4,8 @@ import DateTime from "./DateTime";
 import City from "./City";
 import Weather from "./Weather";
 import WeatherInfo from "./WeatherInfo";
-import HourForecast from "./HourForecast"
-import axios from "axios"
+import HourForecast from "./HourForecast";
+import axios from "axios";
 
 function App() {
   const [weather, setWeather] = useState({ready: false});
@@ -68,7 +68,7 @@ function App() {
             <WeatherInfo currentDescription={weather.description} feelsLikeTemp={weather.feelsLike} currentHumidity={weather.humidity} windSpeed={weather.wind} />
           </div>
           <div className="col-md-9">
-            <HourForecast />
+            <HourForecast city={weather.city} />
           </div>
         </div>
         <br />
