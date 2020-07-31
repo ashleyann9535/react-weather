@@ -1,6 +1,8 @@
 import React from "react"; 
 
 export default function ForecastPreview(props){
+    const icon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`
+
     function temperature(){
         let temperature = Math.round(props.data.main.temp)
         return temperature 
@@ -15,10 +17,11 @@ export default function ForecastPreview(props){
     return(
         <div className="col-1">
             <header> 
-                 <img src={props.data.weather[0].icon} className="card-img-top" alt=""/>
+                 <img src={icon} className="card-img-top" alt=""/>
             </header>
             <h5>{temperature()}°F</h5>
             <p >{hours()}:00 </p>
          </div>
     )
 }
+

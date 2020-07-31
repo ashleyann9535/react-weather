@@ -40,7 +40,7 @@ export default function Weather(props) {
         <div>
           <img src={props.mainIcon} className="card-img-top" alt="" />
           <br />
-          <small>{Math.round(equation())}°</small> 
+          <small className="currentTemp">{Math.round(equation())}°</small> 
           <span><a href="/" onClick={showFahrenheit}>F </a>
            | C</span>
         </div>

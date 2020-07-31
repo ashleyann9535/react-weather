@@ -12,7 +12,6 @@ function App() {
   const [city, setCity] = useState ("Chicago")
 
   function displayWeather(response){
-    console.log (response.data)
     setWeather({
       ready: true,
       temperature: Math.round(response.data.main.temp),

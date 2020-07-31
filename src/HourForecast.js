@@ -9,17 +9,19 @@ function HourForecast (props) {
     const [forecast, setForecast] = useState(null);
 
     function hourlyForecastResponse(response){
-        console.log(response.data);
         setForecast(response.data);
         setLoaded(true); 
     }
     
     if (loaded && props.city === forecast.city.name){
         return (
-            <div className="row">
-                <ForecastPreview data={forecast.list[0]} />
-                <ForecastPreview data={forecast.list[1]} />
-                <ForecastPreview data={forecast.list[2]} />
+            <div>
+                <header className="title">Three Hour Forecast</header>
+                <div className="row">
+                    <ForecastPreview data={forecast.list[0]} />
+                    <ForecastPreview data={forecast.list[1]} />
+                    <ForecastPreview data={forecast.list[2]} />
+                </div>
             </div>
         );
     }else {
