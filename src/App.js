@@ -44,7 +44,7 @@ function App() {
   if (weather.ready){
     return (
       <div className="App">
-        <h1>Weather</h1>
+        <h1>Today's Weather</h1>
         <div className="Search">
           <form onSubmit={searchSubmit} >
             <input type="search" placeholder="city" onChange={searchCity} />
