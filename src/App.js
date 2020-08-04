@@ -72,7 +72,7 @@ function App() {
         </div>
         <br />
         <h6 className="gitSite">
-          <a href="https://github.com/ashleyann9535/react-weather" target = "_blank">Open source code </a>
+          <a href="https://github.com/ashleyann9535/react-weather" >Open source code </a>
           by Ashley Johnson
         </h6>
       </div>
