@@ -15,7 +15,7 @@ export default function Weather(props) {
   }
 
   function equation(){
-    return(props.fahrenheit - 32 * 5/9)
+    return((props.fahrenheit - 32) * (5/9))
 
   }
 
