@@ -66,7 +66,7 @@ function App() {
           <div className="col-md-3">
             <WeatherInfo currentDescription={weather.description} feelsLikeTemp={weather.feelsLike} currentHumidity={weather.humidity} windSpeed={weather.wind} />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-9 forecast">
             <HourForecast city={weather.city} />
           </div>
         </div>

@@ -12,5 +12,5 @@ export default function DateTime(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`
   }
-  return <div className="DateTime">Last Updated:{day} {hours}:{minutes} </div>;
+  return <div className="DateTime">Last Updated: {day} {hours}:{minutes} </div>;
 }
